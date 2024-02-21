@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/src/output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .font-plus {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .font-ibm {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+    </style>
+
+</head>
+
+<body
+    class="w-full h-screen bg-[url('/src/bg.jpg')] bg-cover bg-center flex justify-center items-center overflow-hidden select-none flex-col text-center font-plus">
+
+
+    <img class="h-20 saturate-0 brightness-200 hover:saturate-100 hover:brightness-100 duration-500"
+        src="/src/logo-bright-purple.png" alt="">
+    <h1 class="text-white font-ibm font-extralight text-base mt-3">Where bytes meet brains.</h1>
+
+    <section class="my-3">
+        <a href="question.html">
+            <div class="btn-container">
+                <button
+                    class="overflow-hidden w-60 p-2 h-12 bg-white text-purple-800 hover:text-white border-none rounded-md text-xl font-bold cursor-pointer relative z-10 group">Start!
+    
+                    <span
+                        class="absolute w-60 h-32 -top-8 -left-0  bg-[#ded8fc  rounded-full transform scale-x-0 group-hover:scale-x-125 transition-transform group-hover:duration-500 duration-1000 origin-bottom"></span>
+                    <span
+                        class="absolute w-60 h-32 -top-8 -left-0 bg-[#ab8bfa] rounded-full transform scale-x-0 group-hover:scale-x-125 transition-transform group-hover:duration-700 duration-700 origin-bottom"></span>
+                    <span
+                        class="absolute w-60 h-32 -top-8 -left-0 bg-[#833aed] rounded-full transform scale-x-0 group-hover:scale-x-125 transition-transform group-hover:duration-1000 duration-500 origin-bottom"></span>
+                    <span
+                        class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-24 z-10">Start!</span>
+                </button>
+            </div>
+        </a>
+    </section>
+
+    <footer class="fixed bottom-0 text-center font-ibm flex justify-center items-center flex-col">
+        <h1 class="text-white mb-3 w-56">Check Out The Developer's Portofolio!</h1>
+        <div class="bg-white py-3 rounded-t-md font-bold">
+          <a href="https://ammarzhrn.github.io" target="_blank" class="inline-block w-40 text-purple-800 hover:text-purple-950">Ammar Zahran</a>
+          <a href="https://rizqiirkham.github.io" target="_blank" class="inline-block w-40 text-purple-800 hover:text-purple-950">Rizqi Irkham</a>
+        </div>
+      </footer>
+</body>
+
+</html>
