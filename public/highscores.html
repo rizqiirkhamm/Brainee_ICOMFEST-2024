@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>High Scores</title>
+  <link rel="stylesheet" href="/src/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    .font-plus {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .font-ibm {
+      font-family: 'IBM Plex Mono', monospace;
+    }
+  </style>
+
+</head>
+
+<body class="bg-[url('/src/bg.jpg')] bg-cover bg-center font-plus select-none">
+    <div id="highScores" class="w-full h-screen flex justify-center items-center flex-col">
+      <h1 id="finalScore" class="text-6xl font-bold text-white">High Score's</h1>
+      <div class="list-cont bg-white p-8 text-center rounded-md mt-8">
+        <ul class="text-violet-700 font-bold" id="highScoresList"></ul>
+      </div>
+      <button class="mt-5 text-white font-thin text-2xl" id="resetButton">Reset The Score's</button>
+      <a href="index.html">
+        <button class="mt-5 text-white font-bold text-2xl">
+          <span>Back</span>
+        </button>
+      </a>
+      
+    </div>
+  <script src="/public/js/highscores.js"></script>
+</body>
+
+</html>

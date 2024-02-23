@@ -23,13 +23,83 @@
         .font-ibm {
             font-family: 'IBM Plex Mono', monospace;
         }
+
+        .splash-container {
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .animated-text {
+            animation: changeText 0.2s infinite;
+        }
     </style>
 
 </head>
 
-<body class="w-full h-screen bg-[url('/src/bg.jpg')] bg-cover bg-center flex justify-center items-center overflow-hidden select-none flex-col text-center font-plus">
-    
-    
+
+<body class="w-full h-screen flex justify-center items-center overflow-hidden select-none flex-col font-plus md:flex-row">
+
+    <div
+        class="splash-container fixed top-0 left-0 w-full h-screen bg-violet-900 flex justify-center items-center z-50">
+        <div class="text-container text-center">
+            <h1 class="animated-text text-white text-4xl font-bold">Pilih Materi</h1>
+        </div>
+    </div>
+
+    <div class="w-full h-screen flex justify-center items-center overflow-hidden select-none flex-col font-plus md:flex-row">
+        <nav class="h-auto w-full bg-violet-800 fixed flex justify-center items-center top-0 py-5">
+            <a href="index.html">
+                <img class="h-12" src="/src/logo-white.png" alt="">
+            </a>
+        </nav>
+        <!-- Technology -->
+        <a class="w-full h-1/2 md:w-1/2 md:h-full" href="tech1.html">
+            <div class="question-cat-container w-full h-full bg-violet-950 flex justify-start items-center flex-col">
+                <img class="h-3/5 w-full object-cover" src="/src/tech.png" alt="">
+                <h1 class="text-white mt-8 md:mt-10 font-bold text-7xl xl:font-5xl font-ibm">Technology</h1>
+                <h1 class="text-white text-xl mt-40 max-md:mt-7 font-ibm font-extralight">Click To Start</h1>
+            </div>
+        </a>
+        <!-- Geography -->
+        <a class="w-full h-1/2 md:w-1/2 md:h-full" href="geo.html">
+            <div class="question-cat-container w-full h-full bg-violet-900 flex justify-start items-center flex-col">
+                <img class="h-3/5 w-full object-cover" src="/src/geo.png" alt="">
+                <h1 class="text-white mt-8 md:mt-10 font-bold text-7xl xl:text-5xl font-plus">Geography</h1>
+                <h1 class="text-white text-xl mt-40 max-md:mt-7 font-ibm font-extralight">Click To Start</h1>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const splashContainer = document.querySelector(".splash-container");
+
+            setTimeout(function () {
+                splashContainer.classList.add("hidden");
+                setTimeout(function () {
+                    splashContainer.style.display = "none";
+                }, 1000);
+            }, 2500);
+
+            const animatedText = document.querySelector('.animated-text');
+            const words = ['Select Material', 'Pilih Materi', '재료 선택', 'Kies Materiaal', '选择材料', '素材の選択', 'حدد المادة'
+            ];
+
+            let currentWordIndex = 0;
+
+            function changeWord() {
+                animatedText.textContent = words[currentWordIndex];
+                currentWordIndex = (currentWordIndex + 1) % words.length;
+            }
+
+            setInterval(changeWord, 200);
+        });
+    </script>
 </body>
 
 </html>

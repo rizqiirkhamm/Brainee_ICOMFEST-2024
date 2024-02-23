@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/src/output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="/public/css/app.css" />
+        <link rel="stylesheet" href="/public/css/style-tech.css" />
+        <link rel="icon" type="image/jpg" href="assets/play.jpg">
+
+    <style>
+        .font-plus {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .font-ibm {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .splash-container {
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .animated-text {
+            animation: changeText 0.2s infinite;
+        }
+
+    </style>
+
+</head>
+
+
+<body
+    class="tech-quest w-screen h-screen bg-[url('/src/bg.jpg')] bg-cover bg-center flex justify-center items-center overflow-hidden select-none font-plus">
+
+    <a href="index.html" class="font-bold text-white text-5xl fixed right-20 bottom-20">Back</a>
+
+
+    <body>
+        <div class="container font-plus">
+            <div id="game" class="justify-center flex-column hidden">
+                <div id="hud">
+                    <div id="hud-item">
+                        <p id="progressText" class="hud-prefix">
+                            Question
+                        </p>
+                        <div id="progressBar">
+                            <div id="progressBarFull"></div>
+                        </div>
+                    </div>
+                    <div id="hud-item">
+                        <p class="hud-prefix">
+                            Score
+                        </p>
+                        <h1 class="hud-main-text" id="score">
+                            0
+                        </h1>
+                    </div>
+                </div>
+                <h2 id="question"></h2>
+                <div class="choice-container text-violet-800">
+                    <p class="choice-prefix">A</p>
+                    <p class="choice-text text-violet-800" data-number="1"></p>
+                </div>
+                <div class="choice-container text-violet-800">
+                    <p class="choice-prefix">B</p>
+                    <p class="choice-text text-violet-800" data-number="2"></p>
+                </div>
+                <div class="choice-container text-violet-800">
+                    <p class="choice-prefix">C</p>
+                    <p class="choice-text text-violet-800" data-number="3"></p>
+                </div>
+                <div class="choice-container text-violet-800">
+                    <p class="choice-prefix">D</p>
+                    <p class="choice-text text-violet-800" data-number="4"></p>
+                </div>
+            </div>
+        </div>        
+    </body>
+
+    <script src="/public/js/geo.js"></script>
+
+</body>
+
+</html>
