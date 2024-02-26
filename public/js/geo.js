@@ -44,6 +44,14 @@ fetch(
     })
     .catch((err) => {
         console.error(err);
+        alert("Failed to fetch questions. Please try again later.");
+        const backButton = document.createElement('button');
+        backButton.innerText = 'Go Back';
+        backButton.addEventListener('click', () => {
+            window.history.back();
+        });
+        loader.classList.add('hidden');
+        game.appendChild(backButton);
     });
 
 //CONSTANTS

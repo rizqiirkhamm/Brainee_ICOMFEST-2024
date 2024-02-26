@@ -13,8 +13,7 @@ let availableQuesions = [];
 
 let questions = [];
 
-fetch(
-    'https://opentdb.com/api.php?amount=20&category=18&difficulty=easy&type=multiple'
+fetch('https://opentdb.com/api.php?amount=20&category=18&difficulty=easy&type=multiple'
 )
     .then((res) => {
         return res.json();
@@ -44,7 +43,17 @@ fetch(
     })
     .catch((err) => {
         console.error(err);
+        alert("Failed to fetch questions. Please try again later.");
+        const backButton = document.createElement('button');
+        backButton.innerText = 'Go Back';
+        backButton.addEventListener('click', () => {
+            window.history.back();
+        });
+        loader.classList.add('hidden');
+        game.appendChild(backButton);
     });
+    
+    
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
